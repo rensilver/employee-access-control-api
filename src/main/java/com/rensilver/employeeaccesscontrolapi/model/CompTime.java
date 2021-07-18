@@ -16,10 +16,10 @@ import java.time.LocalDateTime;
 @Builder
 public class CompTime {
 
-    @AllArgsConstructor
-    @NoArgsConstructor
     @EqualsAndHashCode
     @Embeddable
+    @Getter
+    @Setter
     public class CompTimeId implements Serializable {
 
         private Long idCompTime;

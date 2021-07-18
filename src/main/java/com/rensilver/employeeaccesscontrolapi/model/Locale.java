@@ -2,6 +2,8 @@ package com.rensilver.employeeaccesscontrolapi.model;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Getter
@@ -10,8 +12,10 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Locale {
 
+    @Id
     private Long id;
     private String description;
 

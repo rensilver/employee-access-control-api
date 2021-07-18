@@ -1,7 +1,10 @@
 package com.rensilver.employeeaccesscontrolapi.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -12,8 +15,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
+@Audited
 public class User {
 
+    @Id
     private Long id;
     private String name;
     private LocalDateTime workingDayBeginning;
@@ -28,6 +34,8 @@ public class User {
 
     @ManyToOne
     private AccessLevel accessLevel;
+
+    @ManyToOne
     private WorkingDay workingDay;
 
 }
