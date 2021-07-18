@@ -21,6 +21,4 @@ public class WorkingDay {
     @GeneratedValue
     private Long id;
     private String description;
-
-
 }
