@@ -18,8 +18,8 @@ public class Calendar {
 
     @Id
     private Long id;
-    @ManyToOne
     private String description;
+    @ManyToOne
     private DataType dataType;
     private LocalDateTime specialDate;
 }
